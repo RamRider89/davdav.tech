@@ -4,6 +4,10 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
+assets/img/portfolio/*
+assets/img/testimonials/*
+*.back
+*_back.php
 *.rsuser
 *.suo
 *.user
