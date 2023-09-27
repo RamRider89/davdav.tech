@@ -77,6 +77,31 @@
     });
   }
 
+  function php_email_form_submit__(thisForm, action, formData) {
+    console.log(action);
+    console.log(formData);
+
+      $.ajax({
+        type: 'POST',
+        url: action,
+        enctype: 'multipart/form-data',
+        data: formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        async: true,
+        beforeSend: function () { console.log(formData); },
+        success: function (response) {
+          console.log(response);
+        },
+        error: function (request, status, error) {
+          console.warn(error);
+          console.warn(request);
+          console.warn(status);
+        }
+      }).done(function () { });
+  }
+
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
