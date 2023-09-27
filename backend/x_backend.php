@@ -45,8 +45,8 @@
       $mailService->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GmailService
       $mailService->Host = "mail.davdav.tech";
       $mailService->Port = 465; // or 587
-      $mailService->Username = "mostrador@davdav.tech";
-      $mailService->Password = "65JrLKv6g5mdHVU";
+      $mailService->Username = "";
+      $mailService->Password = "";
       
       //Recipients
       $mailService->setFrom($from_email, $from_name);
